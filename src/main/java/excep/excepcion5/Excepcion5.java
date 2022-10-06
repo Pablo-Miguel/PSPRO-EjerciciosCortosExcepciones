@@ -14,7 +14,14 @@ public class Excepcion5 {
         int num[] = {4, 8, 16, 32, 64, 128, 256, 512};
         int den[] = {2, 0, 4, 4, 0, 8};
         for (int i = 0; i < num.length; i++) {
-            System.out.println(num[i] + "/" + den[i] + "=" + num[i] / den[i]);
+            try{
+                System.out.println(num[i] + "/" + den[i] + "=" + num[i] / den[i]);
+            } catch (java.lang.ArithmeticException e){
+                System.out.println(e.getMessage());
+            } catch (java.lang.ArrayIndexOutOfBoundsException e){
+                System.out.println(e.getMessage());
+            }
+            
         }
     } // fin de main
 }
